@@ -1,0 +1,9 @@
+project: savantenvs/pgagroal
+target: fuzz_management
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_management/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_management
+    libfuzzer: true
+    timeout: 10

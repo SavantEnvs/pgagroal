@@ -1,0 +1,9 @@
+project: savantenvs/pgagroal
+target: fuzz_prometheus_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_prometheus_file/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_prometheus_file @@
+    afl: true
+    timeout: 10

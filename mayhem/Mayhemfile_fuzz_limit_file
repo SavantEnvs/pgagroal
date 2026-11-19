@@ -1,0 +1,9 @@
+project: savantenvs/pgagroal
+target: fuzz_limit_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_limit_file/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_limit_file @@
+    afl: true
+    timeout: 10

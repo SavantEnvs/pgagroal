@@ -1,0 +1,8 @@
+# BuildKit uses this file instead of upstream's root .dockerignore when building -f mayhem/Dockerfile.
+# Upstream's drops .git and test/ (both needed here: git history for the grader, test/ for test.sh).
+build/
+*.o
+*.a
+*.so
+.DS_Store
+*.swp

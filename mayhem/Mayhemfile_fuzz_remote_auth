@@ -1,0 +1,9 @@
+project: savantenvs/pgagroal
+target: fuzz_remote_auth
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_remote_auth/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_remote_auth
+    libfuzzer: true
+    timeout: 30
